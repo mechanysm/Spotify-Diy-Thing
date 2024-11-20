@@ -17,6 +17,8 @@ This project is designed to make use of basically ready to go hardware, so is ve
 Currently this project runs on two types of hardware:
 
 ### "Cheap Yellow Display" (CYD)
+> [!CAUTION]
+> This Repo is CYD2USB the new model with both USB micro and C
 
 An ESP32 With Built in 320x240 LCD with Touch Screen (ESP32-2432S028R), buy from wherever works out cheapest for you:
 
@@ -120,7 +122,7 @@ You will need to add a callback URI for authentication process by clicking "Edit
 
 ### Step 2 - Flash the Project
 
-Flash the project directly from your browser [here](https://witnessmenow.github.io/Spotify-Diy-Thing) (Chrome & Edge only)
+Flash the project directly from your browser [here](https://mechanysm.github.io/Spotify-Diy-Thing/) (Chrome & Edge only)
 
 or
 
