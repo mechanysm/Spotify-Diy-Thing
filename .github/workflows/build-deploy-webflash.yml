@@ -53,7 +53,7 @@ jobs:
 
       #Build CYD
       - name: Build CYD
-        run: platformio run -e cyd
+        run: platformio run -e cyd2usb
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
