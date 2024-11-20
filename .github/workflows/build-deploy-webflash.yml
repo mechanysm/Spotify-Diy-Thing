@@ -52,25 +52,25 @@ jobs:
           pip install --upgrade platformio
 
       #Build CYD
-      - name: Build CYD
+      - name: Build CYD2USB
         run: platformio run -e cyd2usb
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: CYD Firmware
-          path: .pio/build/cyd/firmware.bin
+          name: CYD2USB Firmware
+          path: .pio/build/cyd2usb/firmware.bin
           if-no-files-found: error
       - name: Copy compiled binaries for webflash
         run: |
-          mkdir GitHubPages/ESPWebTools/cyd
+          mkdir GitHubPages/ESPWebTools/cyd2usb
 
-          # Copy the manifest file for the CYD
-          cp GitHubPages/ESPWebTools/manifest.json GitHubPages/ESPWebTools/cyd
+          # Copy the manifest file for the CYD2USB
+          cp GitHubPages/ESPWebTools/manifest.json GitHubPages/ESPWebTools/cyd2usb
 
-          cp .pio/build/cyd/bootloader.bin GitHubPages/ESPWebTools/cyd
-          cp .pio/build/cyd/partitions.bin GitHubPages/ESPWebTools/cyd
-          cp /home/runner/.platformio/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin GitHubPages/ESPWebTools/cyd
-          cp .pio/build/cyd/firmware.bin GitHubPages/ESPWebTools/cyd
+          cp .pio/build/cyd2usb/bootloader.bin GitHubPages/ESPWebTools/cyd2usb
+          cp .pio/build/cyd2usb/partitions.bin GitHubPages/ESPWebTools/cyd2usb
+          cp /home/runner/.platformio/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin GitHubPages/ESPWebTools/cyd2usb
+          cp .pio/build/cyd2usb/firmware.bin GitHubPages/ESPWebTools/cyd2usb
 
       #Build Matrix
       - name: Build Matrix
